@@ -38,7 +38,7 @@ module.exports = async (req, res) => {
     error: 'Email and OTP are required'
   });
 }
-  }
+  
 
 
   const msg = {
