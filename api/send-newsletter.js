@@ -64,7 +64,7 @@ module.exports = async (req, res) => {
     console.error(error);
 
     return res.status(500).json({
-      error: 'Failed to send OTP'
+      error: 'Failed to send Newsletter'
     });
 
   }
