@@ -51,7 +51,15 @@ module.exports = async (req, res) => {
 
   try {
 
-    await sgMail.send(msg);
+    await sgMail.send({
+    to: email,
+    from: process.env.SENDER_EMAIL,
+    templateId: 'd-17e7eaf6e37c4e57bee4fdbd6d21e80b',
+    dynamicTemplateData: {
+      otp
+    }
+  });
+
 
     return res.status(200).json({
       success: true,
