@@ -56,7 +56,8 @@ module.exports = async (req, res) => {
     from: process.env.SENDER_EMAIL,
     templateId: 'd-17e7eaf6e37c4e57bee4fdbd6d21e80b',
     dynamicTemplateData: {
-      otp
+        otp_code: otp,
+        first_name: ""
     }
   });
 
