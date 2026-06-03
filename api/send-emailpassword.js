@@ -43,7 +43,7 @@ module.exports = async (req, res) => {
 
   try {
     const passwordSetupLink =
-      `https://odyssay-trendy-site.webflow.io/passwprdreset?email=${encodeURIComponent(email)}`;
+      `https://odyssay-trendy-site.webflow.io/passwordreset?email=${encodeURIComponent(email)}`;
 
     await sgMail.send({
     to: email,
