@@ -31,16 +31,15 @@ module.exports = async (req, res) => {
     });
   }
 
-  const { email } = req.body;
+  const { email, otp } = req.body;
 
-  if (!email) {
-    return res.status(400).json({
-      error: 'Email is required'
-    });
+  if (!email || !otp) {
+  return res.status(400).json({
+    error: 'Email and OTP are required'
+  });
+}
   }
 
-  const otp =
-    Math.floor(100000 + Math.random() * 900000);
 
   const msg = {
     to: email,
