@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   // CORS
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://odyssay-trendy-site.canvas.webflow.com'
+    'https://odyssay-trendy-site.webflow.io'
   );
 
   res.setHeader(
