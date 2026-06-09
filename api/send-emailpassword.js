@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   // CORS
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://odyssay-trendy-site.webflow.io'
+    'https://enroll.theodyssey.academy'
   );
 
   res.setHeader(
@@ -43,7 +43,7 @@ module.exports = async (req, res) => {
 
   try {
     const passwordSetupLink =
-      `https://odyssay-trendy-site.webflow.io/passwordreset?email=${encodeURIComponent(email)}`;
+      `https://enroll.theodyssey.academy/passwordreset?email=${encodeURIComponent(email)}`;
 
     await sgMail.send({
     to: email,
